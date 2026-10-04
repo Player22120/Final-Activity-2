@@ -31,8 +31,7 @@ function run() {
       "<span>" +
       userName +
       "!</span></h3><br>" +
-      "Your score: " +
-      score +
+      "Score: " + score +
       "<br>Your remark: " +
       remarks;
   }
