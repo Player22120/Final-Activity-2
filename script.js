@@ -6,21 +6,21 @@ const clearBtn = document.getElementById("clearBtn");
 const userName = getName();
 
 function run() {
-  const grade = Number(prompt("Enter your grade"));
-  if (grade == "" || grade == 0) {
+  const score = Number(prompt("Enter your score"));
+  if (score == "" || score == 0) {
     alert("You need to enter your score");
     return;
-  } else if (Number.isNaN(grade)) {
+  } else if (Number.isNaN(score)) {
     alert("You need to enter an integer");
     return;
   }
   if (confirm("Do you want to continue?")) {
     let remarks;
-    if (grade <= 0 || grade > 100) {
-      remarks = "Invalid Grade";
-    } else if (grade >= 90) {
+    if (score <= 0 || score > 100) {
+      remarks = "Invalid score";
+    } else if (score >= 90) {
       remarks = "Excellent";
-    } else if (grade >= 75) {
+    } else if (score >= 75) {
       remarks = "Passed";
     } else {
       remarks = "Failed";
@@ -31,7 +31,9 @@ function run() {
       "<span>" +
       userName +
       "!</span></h3><br>" +
-      "Your remark: " +
+      "Your score" +
+      score +
+      "<br>Your remark: " +
       remarks;
   }
 
