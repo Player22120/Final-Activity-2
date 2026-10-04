@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: rgb(21, 162, 218);
+  --text-color: azure;
+  --font-family: sans-serif;
+  --font-size: clamp(2rem, 2vw, 3rem);
+  --content-text-color: black;
+  --content-box-color: rgb(185, 185, 185);
+  --disable-button: rgba(21, 162, 218, 0.596);
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 2%;
+}
+
+.header {
+  text-align: center;
+  font-size: var(--font-size);
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  color: azure;
+  border-radius: 8px;
+}
+
+.mb {
+  margin-bottom: 0.5rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  display: block;
+  position: fixed;
+  background: grey;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: auto 50%;
+  min-width: 200px;
+  width: 80%;
+  max-width: 768px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  width: 20%;
+  padding: 2% 0;
+  font-size: 60%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgb(20, 174, 235);
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: var(--disable-button);
+  cursor: not-allowed;
+}
+
+#content {
+  height: auto;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  background-color: var(--content-box-color);
+  color: var(--content-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: rgb(70, 69, 69);
+    --content-text-color: rgb(242, 243, 156);
+    --content-box-color: black;
+  }
+}
+
+@media (min-width: 768px) {
+  #modal {
+    width: 40%;
+    margin: auto 30%;
+  }
+}
